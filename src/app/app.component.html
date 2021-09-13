@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: "Barlow";
+    }
+
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+
+    table {
+      width: 500px;
+    }
+
+    body {
+      width: 500px;
+    }
+
+    .body-section {
+      height: 640px;
+    }
+
+    .logo {
+      float: right;
+    }
+
+    .title {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 36px;
+      text-align: left;
+      color: #1C3A87;
+      margin: 25px 0px 0px 0px
+    }
+
+    .estimation-section {
+      width: 500px;
+    }
+
+    .col-mid {
+      width: 50%;
+    }
+
+    .col-mid-left {
+      border-right: 0px;
+      width: 50%;
+    }
+
+    .col-mid-right {
+      border-left: 0px;
+    }
+
+    .pension-text {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 13px;
+      color: #000000;
+      margin: 24px 0px 0px 13px;
+    }
+
+    .pension-sub-text {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 8px;
+      color: #000000;
+      margin: 5px 0px 10px 15px;
+      width: 230px;
+    }
+
+    .pension-result {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 34px;
+      text-align: center;
+      color: #000000;
+      margin: 0px;
+      width: 240px;
+    }
+
+    .label-text {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+      margin: 5px 0px 5px 16px;
+    }
+
+    .data-text {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+      margin: 5px 0px 5px 16px;
+    }
+
+    .sub-title {
+      color: #000000;
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 15px 0px 8px 0px;
+    }
+
+    .personal-data-section {
+      width: 500px;
+    }
+
+    .beneficiary-table {
+      border: none;
+    }
+
+    .beneficiary-number {
+      font-family: Barlow;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+      margin: 2px 0px 2px 16px;
+    }
+
+    .beneficiary-name {
+      font-family: Barlow;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+      margin: 2px 0px 2px 2px;
+    }
+
+    .beneficiary-text {
+      font-family: Barlow;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 12px;
+      color: #000000;
+    }
+
+    .info-text {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .info-text-bold {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    .info-text-italic {
+      font-family: "Barlow";
+      font-style: italic;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    .col-clean-mid {
+      width: 50%;
+    }
+
+    .col-clean-number {
+      width: 10px;
+    }
+
+    .col-clean-name {
+      width: 220px;
+    }
+
+    .table-clean,
+    .row-clean,
+    .col-clean-mid,
+    .col-clean,
+    .col-clean-number,
+    .col-clean-name,
+    .col-clean-text {
+      border-collapse: collapse;
+      border: 0px !important;
+    }
+
+    .col-height-24 {
+      height: 24px
+    }
+
+    .sub-section-title {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #000000;
+      margin: 5px 0px 0px 0px;
+    }
+
+    .sub-section-text {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #000000;
+      margin-top: 0px;
+    }
+
+    .contact-phone {
+      margin: 0px 0px 8px 125px;
+    }
+
+    .footer-disclaimer {
+      font-family: "Barlow";
+      font-style: italic;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      color: #586E89;
+      margin: 0px 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img class="logo"
+    src="https://storage.googleapis.com/assets-estimador-test/assets/images/AFP%20Capital.svg">
+    <br>
+  </div>
+  <section class="body-section">
+    <div>
+      <p class="title">Resultado Estimación de pensión</p>
+    </div>
+    <div class="estimation-section">
+      <table>
+        <tr>
+          <td colspan='3'>
+            <div class="pension-header">
+              <span class="pension-text">Tu pensión estimada sería de</span>&nbsp; &nbsp; &nbsp; &nbsp;
+              <span class="pension-result">$1.000.767.382</span>
+            </div>
+            <p class="pension-sub-text">Si te pensionas a los 60 años</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="label-text">Saldo Proyectado</p>
+            <p class="data-text">$154.090.8334</p>
+          </td>
+          <td>
+            <p class="label-text">CNU</p>
+            <p class="data-text">16,733340375</p>
+          </td>
+          <td>
+            <p class="label-text">Modalidad de pensión</p>
+            <p class="data-text">Retiro Programado</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="personal-data-section">
+      <p class="sub-title">Tus datos personales</p>
+      <table>
+        <tr>
+          <td colspan='2'>
+            <p class="label-text">Nombre</p>
+            <p class="data-text">Cristobal Quintana López</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-mid">
+            <p class="label-text">Fecha de Nacimiento</p>
+            <p class="data-text">30-12-1987</p>
+          </td>
+          <td>
+            <p class="label-text">Sexo</p>
+            <p class="data-text">Masculino</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="remuneration-section">
+      <p class="sub-title">Remuneración</p>
+      <table>
+        <tr>
+          <td>
+            <p class="label-text">Remuneración 6 Meses</p>
+            <p class="data-text">$10.345.394</p>
+          </td>
+          <td>
+            <p class="label-text">Remuneración 120 Meses</p>
+            <p class="data-text">$110.345.394</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="beneficiary-section">
+      <p class="sub-title">Beneficiarios</p>
+      <table class="table-beneficiary">
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">1.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">2.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">3.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">4.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">5.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">6.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">7.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">8.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">9.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">10.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+        <tr class="row-clean">
+          <td class="col-clean-number">
+            <span class="beneficiary-number">11.-</span>
+          </td>
+          <td class="col-clean-name">
+            <span class="beneficiary-name">Francisca Fuenzalida</span>
+          </td>
+          <td class="col-clean">
+            <span class="beneficiary-text">Hija</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <div class="header">
+    <img class="logo"
+  src="https://storage.googleapis.com/assets-estimador-test/assets/images/AFP%20Capital.svg">
+    <br>
+  </div>
+  <section class="body-section">
+    <div>
+      <p class="title">Resultado Estimación de pensión</p>
+    </div>
+
+    <div class="balances-section">
+      <p class="sub-title">Saldos Actuales</p>
+      <table>
+        <tr>
+          <td class="col-mid">
+            <p class="label-text">Cuenta Obligatoria</p>
+            <p class="data-text">$273.384</p>
+          </td>
+          <td>
+            <p class="label-text">Depositos Convenidos</p>
+            <p class="data-text">$234.394.000</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-mid">
+            <p class="label-text">Bonos de Reconocimientos</p>
+            <p class="data-text">$793.000</p>
+          </td>
+          <td>
+            <p class="label-text">Cuenta 2</p>
+            <p class="data-text">$23.000</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-mid">
+            <p class="label-text">APV</p>
+            <p class="data-text">$773.384</p>
+          </td>
+          <td>
+            <p class="label-text">Depositos Convenidos</p>
+            <p class="data-text">$234.394.000</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-mid">
+            <p class="label-text">Cotizaciones Voluntarias</p>
+            <p class="data-text">$73.384</p>
+          </td>
+          <td>
+            <p class="label-text">Afiliado Voluntario</p>
+            <p class="data-text">$23.837</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="strategy-section">
+      <p class="sub-title">Estrategia de inversión</p>
+      <table>
+        <tr>
+          <td>
+            <p class="label-text">18-35 Años</p>
+            <p class="data-text">Fondo A</p>
+          </td>
+          <td>
+            <p class="label-text">36-50 Años</p>
+            <p class="data-text">Fondo B</p>
+          </td>
+          <td>
+            <p class="label-text">51-60 Años</p>
+            <p class="data-text">Fondo C</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <div class="header">
+    <img class="logo"
+src="https://storage.googleapis.com/assets-estimador-test/assets/images/AFP%20Capital.svg">
+    <br>
+  </div>
+  <section class="body-section">
+    <div>
+      <p class="title">Supuestos de la estimación</p>
+    </div>
+    <div class="estimate-section">
+      <table class="table-clean">
+        <tr class="row-clean">
+          <td class="col-clean-mid" valign="top" style="padding-right: 25px;">
+            <p class="info-text">
+              <b>1. Su estimación de pensión responde a su situación particular</b> a la fecha de simulación, la
+              información
+              registrada podría tener variaciones en el futuro (renta imponible, saldos, aportes, rentabilidad,
+              beneficiarios legales, tablas de mortalidad, tasa de interés, etc.) Por lo anterior, una nueva estimación
+              de pensión o su trámite de pensión en AFP Capital podría generar distintos resultados, por lo que su
+              estimación de pensión es una simulación que no confiere derecho alguno al afiliado.
+            </p>
+            <p class="info-text">
+              <b>2. Con objeto de obtener resultados definitivos</b>, debe iniciar su trámite de pensión en cualquiera
+              de
+              nuestras sucursales y esperar el certificado de ofertas emitido por el SCOMP (sistema consulta y ofertas
+              monto de pensión y excedente).
+            </p>
+            <p class="info-text">
+              <b>3. Para determinar el Capital Necesario Unitario de pensión</b>, esta simulación utiliza tablas de
+              mortalidad
+              vigentes y tasa de interés, la que es calculada e informada por la Superintendencia de Pensiones.
+            </p>
+            <p class="info-text">
+              <b>4. La rentabilidad real utilizada para proyectar sus saldos o aportes</b> tiene relación a cada
+              Multifondo, la
+              cual exponemos a continuación:
+            </p>
+          </td>
+          <td class="col-clean" style="    padding-left: 25px;">
+            <table style="width:100%">
+              <tr class="col-height-24">
+                <td class="label-text">Fondo A - 5,22%</td>
+                <td class="label-text">Fondo B - 4,60%</td>
+              </tr>
+              <tr class="col-height-24">
+                <td class="label-text">Fondo C - 4,04%</td>
+                <td class="label-text">Fondo D - 3,56%</td>
+              </tr>
+              <tr class="col-height-24">
+                <td class="label-text">Fondo E - 3,13%</td>
+                <td class="label-text"></td>
+              </tr>
+            </table>
+            <i class="info-text-italic">*Rentabilidad informada por la superintendencia de pensiones para la simulación.</i>
+            <p class="info-text">
+              <b>5. La simulación calcula una Renta Vitalicia inmediata sin condiciones especiales de cobertura.</b> La
+              tasa de interés implícita de la Renta Vitalicia es de un 3,23% en base a lo informado por la
+              Superintendencia de Pensiones.
+            </p>
+            <p class="info-text">
+              <b>6. Si el número de años que quedan para pensionarse es menor a 20 años,</b> la tasa de renta vitalicia
+              proyectada corresponderá a un valor entre la tasa de renta vitalicia proyectada y la tasa de renta
+              vitalicia de vejez vigente al momento del cálculo de la proyección.
+            </p>
+            <p class="info-text">
+              <b>7. En caso de simular sin beneficiarios y elegir no realizar como soltero.</b> La simulación efectuada
+              incorpora un beneficiario por defecto, de acuerdo a las siguientes reglas:
+            </p>
+            <p class="info-text">
+              - Si el afiliado es de sexo femenino, se incorpora un cónyuge de sexo masculino, con una fecha de
+              nacimiento 2 años mayor a la causante.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <div class="header">
+    <img class="logo"
+src="https://storage.googleapis.com/assets-estimador-test/assets/images/AFP%20Capital.svg">
+    <br>
+  </div>
+  <section class="body-section">
+    <div>
+      <p class="title">Supuestos de la estimación</p>
+    </div>
+
+    <div class="estimate-section">
+      <table class="table-clean">
+        <tr class="row-clean">
+          <td class="col-clean-mid" valign="top" style="    padding-right: 20px;">
+            <p class="info-text" style="margin-left: 14px;"> - Si el afiliado es de sexo masculino, se incorpora un
+              cónyuge de sexo femenino, con una fecha de nacimiento 2 años menor al causante. No obstante a la
+              incorporación de un beneficiario por defecto, el usuario puede modificar dicho parámetro (incorporar o
+              eliminar beneficiarios) en la sección "Ver Beneficiarios".</p>
+            <p class="info-text">
+              <b>8. Para mujeres cuya edad sean mayor a 57 años y hombres cuya edad sean mayor a 62 años,</b> la
+              simulación
+              supone una proyección de rentabilidad real de 0% a contar de tal edad. Lo anterior, aplicará a todas sus
+              cuentas menos el saldo por bono de reconocimiento.
+            </p>
+            <p class="info-text">
+              <b>9. La renta imponible utilizada para determinar proyección de sus cotizaciones obligatorias</b> es el
+              promedio
+              de las últimas 6 rentas imponibles considerando el periodo de tres años anteriores a dicha fecha.
+            </p>
+          </td>
+          <td class="col-clean" style="    padding-left: 25px;">
+            <p class="info-text">
+              Si existieren menos de 6 rentas imponibles en el periodo se utilizará el promedio de las existentes. Si no
+              se encuentran rentas imponibles en el periodo, se utilizará como renta imponible el ingreso mínimo vigente
+              a la fecha de cálculo. No obstante el usuario puede cambiar este monto.
+            </p>
+            <p class="info-text">
+              <b>10. Sugerimos ingresar el promedio de renta imponible de sus últimos 10 años</b> con objeto que el
+              cálculo
+              utilice los parámetros cercanos a un trámite de pensión ingresado a través de una sucursal de nuestra AFP
+              Capital.
+            </p>
+            <p class="info-text">
+              <b>11. La simulación asume que la renta imponible</b> se mantiene en el futuro y no existen periodos sin
+              cotizaciones.
+            </p>
+            <p class="info-text">
+              <b>12. El Bono de Reconocimiento se proyecta utilizando una tasa de rentabilidad real</b> del 4% anual
+              hasta la
+              fecha de liquidación del Bono (edad de pensión).
+            </p>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <p class="sub-section-title">¿No realizaste esta operación?</p>
+        <p class="sub-section-text">Llámanos a nuestro Call Center para revisar la situación</p>
+        <img src="https://storage.googleapis.com/assets-estimador-test/assets/icons/message.svg" alt="" class="contact-phone">
+        <p class="footer-disclaimer">La rentabilidad es variable, por lo que nada garantiza que las rentabilidades
+          pasadas se repitan en el futuro, infórmese sobre la rentabilidad de su Fondo de Pensiones, las comisiones y la
+          calidad de servicio de las AFP en el sitio web de la Superintendencia de Pensiones www.spensiones.cl.</p>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
